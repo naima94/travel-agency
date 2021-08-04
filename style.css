@@ -149,7 +149,7 @@ input {
 
 .grid {
     display: grid;
-    grid: 1.5rem;
+    gap: 1.5rem;
 }
 
 /* ================== HEADER ================== */
@@ -519,5 +519,81 @@ input {
     font-size: 1.2rem;
 }
 
-
 /* ================== PLACE================== */
+
+.place-card,
+.place-img {
+    height: 230px;
+}
+
+.place-container {
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+}
+
+.place-card {
+    position: relative;
+    overflow: var(--img-hidden);
+}
+
+.place-content,
+.place-title {
+    color: var(--white-color);
+}
+
+.place-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .75rem .75rem 1rem;
+}
+
+.place-rating {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+.place-rating-item {
+    font-size: .75rem;
+    margin-right: .25rem;
+}
+
+.place-rating-number {
+    font-size: var(--small-font-size);
+}
+
+.place-subtitle,
+.place-price {
+    display: block;
+}
+
+.place-title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-25);
+}
+
+.place-subtitle {
+    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mb-1-25);
+}
+
+.place-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: .75rem 1rem;
+}
+
+.place-img {
+    transition: var(--img-transition);
+}
+
+.place-card:hover .place-img {
+    transform: var(--img-scale);
+}
