@@ -597,3 +597,38 @@ input {
 .place-card:hover .place-img {
     transform: var(--img-scale);
 }
+
+/* ================== Subscribe================== */
+
+.subscribe-bg {
+    background-color: var(--frist-color);
+    padding: 2.5rem 0;
+}
+
+.subscribe-title,
+.subscribe-description {
+    color: var(--white-color);
+}
+
+.subscribe-description {
+    text-align: center;
+    margin-bottom: var(--mb-2-5);
+}
+
+.subscribe-form {
+    background-color: var(--input-color);
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscribe-input {
+    width: 70%;
+    padding-right: .5rem;
+    background-color: var(--input-color);
+    color: var(--text-color);
+}
+
+.subscribe-input::placeholder {
+    color: var(--text-color);
+}
