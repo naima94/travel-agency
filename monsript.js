@@ -84,3 +84,13 @@ var swiper = new Swiper(".discover-container", {
 
         // Ended, when the video end
         videoFile.addEventListener("ended", finalVideo)
+
+
+        /* ================ SHOW SCROLL ================ */
+        function scrollUp() {
+            const scrollUp = document.getElementById("scroll-up");
+            // When the scroll is higher than 200 viewport height, add the show-scroll class to the tag with the scrollUp 
+            if(this.scrollY >= 200) scrollUp.classList.add("show-scroll"); 
+            else scrollUp.classList.remove("show-scroll")
+        }
+        window.addEventListener("scroll", scrollUp)
