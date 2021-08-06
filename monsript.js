@@ -94,3 +94,23 @@ var swiper = new Swiper(".discover-container", {
             else scrollUp.classList.remove("show-scroll")
         }
         window.addEventListener("scroll", scrollUp)
+
+        /* ================ SCROLL ACTIONS ACTIVE LINK ================ */
+        const section = document.querySelectorAll("section[id]")
+
+        function scrollActive() {
+            const scrollY =window.pageYOffset
+
+            section.forEach(current => {
+                const sectionHeight = current.offsetHeight
+                const sectionTop = current.offsetTop - 50
+                sectionId = current.getAttribute("id")
+
+                if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelector(".nav-menu a[href*="+ sectionId +"]").classList.add("active-link")
+                } else {
+                    document.querySelector(".nav-menu a[href*="+ sectionId +"]").classList.remove("active-link")
+                }
+            })
+        }
+        window.addEventListener("scroll", scrollActive)
