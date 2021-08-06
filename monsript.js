@@ -48,8 +48,15 @@ var swiper = new Swiper(".discover-container", {
     spaceBetween: 32,
     coverflowEffect: {
       rotate: 0,
+      /*stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,*/
     },
-  });
+    /*pagination: {
+      el: ".swiper-pagination",
+    },*/
+  })
 
   /* ================ VIDEO ================ */
   const videoFile = document.getElementById("video-file"),
@@ -135,7 +142,7 @@ var swiper = new Swiper(".discover-container", {
             themeButton.classList[selectedIcon === "ri-moon-line" ? "add" : "remove"](IconTheme)
         }
 
-        // Activate / Desactivate the theme manually withthe button
+        // Activate / Desactivate the theme manually with the button
             themeButton.addEventListener("click", () => {
             // Add or remove the dark/light icon theme
             document.body.classList.toggle(darkTheme)
