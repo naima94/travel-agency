@@ -139,7 +139,7 @@ var swiper = new Swiper(".discover-container", {
         if(selectedTheme) {
             // If the validation is fullfiled we ask what the issue was to know if we actived the dark mode
             document.body.classList[selectedTheme === "dark" ? "add" : "remove"](darkTheme)
-            themeButton.classList[selectedIcon === "ri-moon-line" ? "add" : "remove"](IconTheme)
+            themeButton.classList[selectedIcon === "ri-moon-line" ? "add" : "remove"](iconTheme)
         }
 
         // Activate / Desactivate the theme manually with the button
@@ -152,3 +152,34 @@ var swiper = new Swiper(".discover-container", {
             localStorage.setItem("selected-theme", getCurrentTheme())
             localStorage.setItem("selected-icon", getCurrentIcon())
         })
+
+/* ===========  SSCROLL REVEAL ANIMATION  =========== */
+const sr = ScrollReveal({
+    distance: "60px",
+    duration: 2800,
+    reset: true,
+})
+
+sr.reveal(`.home-data, .home-social-link, .home-info, 
+            .discover-container, 
+            .experience-data, .experience-overlay,
+            .place-card,
+            .sponsor-content,
+            .footer-data, .footer-rights`,{
+    origin: "top",
+    interval: 100,
+})
+
+sr.reveal(`.about-data,
+            .video-description,
+            .subscribe-description`,{
+    origin: "left",
+})
+
+sr.reveal(`.about-img-overlay,
+            .video-content,
+            .subscribe-form`,{
+    origin: "right",
+    interval: 100,
+})
+
